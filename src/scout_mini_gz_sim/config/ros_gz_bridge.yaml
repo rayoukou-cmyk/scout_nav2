@@ -1,0 +1,37 @@
+# ROS-Gazebo Bridge Configuration
+# Maps Ignition topics to ROS2 topics
+
+- topic: /clock
+  type: rosgraph_msgs/msg/Clock
+  gz_type: ignition.msgs.Clock
+  direction: GZ_TO_ROS
+
+- topic: /cmd_vel
+  type: geometry_msgs/msg/Twist
+  gz_type: ignition.msgs.Twist
+  direction: ROS_TO_GZ
+
+- topic: /odom
+  type: nav_msgs/msg/Odometry
+  gz_type: ignition.msgs.Odometry
+  direction: GZ_TO_ROS
+
+- topic: /imu
+  type: sensor_msgs/msg/Imu
+  gz_type: ignition.msgs.IMU
+  direction: GZ_TO_ROS
+
+- topic: /front_lidar_scan
+  type: sensor_msgs/msg/LaserScan
+  gz_type: ignition.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- topic: /rear_lidar_scan
+  type: sensor_msgs/msg/LaserScan
+  gz_type: ignition.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- topic: /joint_states
+  type: sensor_msgs/msg/JointState
+  gz_type: ignition.msgs.Model
+  direction: GZ_TO_ROS
